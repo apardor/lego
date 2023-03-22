@@ -1,5 +1,26 @@
-<h2>Themes</h2>
+<aside>
 <ul>
-    <li *ngFor="let theme of data">{{theme.name}}</li>
+    <li  *ngIf="parameter.theme  === 'movies'"
+         class="flex flex-col">
+        <a 
+        *ngFor="let theme of movies">
+            {{theme.name}}
+        </a> 
+    </li>
+    <li  *ngIf="parameter.theme  === 'city'"
+        class="flex flex-col">
+    <a 
+    *ngFor="let theme of city">
+        {{theme.name}}
+    </a> 
+    </li>
+    <li  *ngIf="parameter.theme  === 'space'"
+    class="flex flex-col">
+   <a 
+   *ngFor="let theme of space">
+       {{theme.name}}
+   </a> 
+</li>
 </ul>
+</aside>
 

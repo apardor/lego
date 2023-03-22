@@ -6,9 +6,22 @@ import { Injectable } from '@angular/core';
 })
 export class ThemeService {
 
-  constructor(private http: HttpClient) {}
+  constructor(public http: HttpClient) {}
 
   getThemeData(){
-    return this.http.get('');
+    return this.http.get('http://localhost:8000/api/themes');
   }
+
+  getMovieThemes(){
+    return this.http.get('http://localhost:8000/api/themes/movies');
+  }
+
+  getCityThemes(){
+    return this.http.get('http://localhost:8000/api/themes/city')
+  }
+
+  getSpaceThemes(){
+    return this.http.get('http://localhost:8000/api/themes/space')
+  }
+
 }

@@ -1,14 +1,18 @@
 import express, { Express, Request, Response } from 'express';
+import cors from 'cors'
 import router from './router';
 import bodyParser from "body-parser";
 import dotenv from 'dotenv';
 dotenv.config();
 
-
 const app: Express = express();
+app.use(cors());
+
 const port = process.env.PORT;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+
 
 app.get("/", (req: Request, res: Response) => {
     res.json({"message":"Ok"})
