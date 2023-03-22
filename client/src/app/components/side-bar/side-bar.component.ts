@@ -21,20 +21,24 @@ export class SideBarComponent implements OnInit {
               private route: ActivatedRoute ){}
 
   ngOnInit(): void {
-    this.parameter = this.route.snapshot.params;
-    this.themeService.getThemeData().subscribe(
-      (res:any) => this.data = res, 
-    )
-    this.themeService.getMovieThemes().subscribe(
-      (res:any) => this.movies = res, 
-    )
-    this.themeService.getCityThemes().subscribe(
-      (res:any) => this.city = res, 
-    )
-    this.themeService.getSpaceThemes().subscribe(
-      (res:any) => this.space = res, 
-    )
+ 
+    
+    this.route.params.subscribe( () =>{
+      this.parameter = this.route.snapshot.params['theme'];
+      switch(this.parameter){
+        case 'movies':
+          this.themeService.getMovieThemes().subscribe((res:any) => this.data = res);
+          break;
+        case 'city':
+          this.themeService.getCityThemes().subscribe((res:any) => this.data = res);
+          break;
+        case 'space':
+          this.themeService.getSpaceThemes().subscribe((res:any) => this.data = res);
+          break;  
+          default:
+          break;
+        }
+    });
   }
-
 }
 

@@ -1,26 +1,11 @@
 <aside>
-<ul>
-    <li  *ngIf="parameter.theme  === 'movies'"
-         class="flex flex-col">
-        <a 
-        *ngFor="let theme of movies">
+    <ul>
+        <li class="flex flex-col">
+            <a
+            [routerLink]="[theme.id]"
+            *ngFor="let theme of data">
             {{theme.name}}
-        </a> 
-    </li>
-    <li  *ngIf="parameter.theme  === 'city'"
-        class="flex flex-col">
-    <a 
-    *ngFor="let theme of city">
-        {{theme.name}}
-    </a> 
-    </li>
-    <li  *ngIf="parameter.theme  === 'space'"
-    class="flex flex-col">
-   <a 
-   *ngFor="let theme of space">
-       {{theme.name}}
-   </a> 
-</li>
-</ul>
+            </a> 
+        </li>
+    </ul>
 </aside>
-

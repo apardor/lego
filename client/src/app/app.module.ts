@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
-import { ThemeComponent } from './components/theme/theme.component';
+import { ThemesComponent } from './components/themes/themes.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -18,7 +18,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     AppComponent,
     HomeComponent,
     SideBarComponent,
-    ThemeComponent,
+    ThemesComponent,
     NavbarComponent,
   ],
   imports: [
