@@ -27,7 +27,10 @@ export class SideBarComponent implements OnInit {
       this.parameter = this.route.snapshot.params['theme'];
       switch(this.parameter){
         case 'movies':
-          this.themeService.getMovieThemes().subscribe((res:any) => this.data = res);
+          this.themeService.getMovieThemes().subscribe((res:any) =>{
+            this.data = res;
+            console.log(this.data, 'here is data from sidebar');
+          });
           break;
         case 'city':
           this.themeService.getCityThemes().subscribe((res:any) => this.data = res);

@@ -9,8 +9,10 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { ThemesComponent } from './components/themes/themes.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card'; 
+import {MatSidenavModule} from '@angular/material/sidenav';
 import { NavbarComponent } from './components/navbar/navbar.component';
-
+import { ThemeComponent } from './components/themes/theme/theme.component';
 
 
 @NgModule({
@@ -20,6 +22,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     SideBarComponent,
     ThemesComponent,
     NavbarComponent,
+    ThemeComponent
   ],
   imports: [
     BrowserModule,
@@ -27,8 +30,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     BrowserAnimationsModule,
     HttpClientModule,
     MatToolbarModule,
-    MatButtonModule
-  ],
+    MatButtonModule,
+    MatCardModule,
+    MatSidenavModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

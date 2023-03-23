@@ -24,4 +24,8 @@ export class ThemeService {
     return this.http.get('http://localhost:8000/api/themes/space')
   }
 
+  getSetById(id:any){
+    return this.http.get(`http://localhost:8000/api/sets/${id}`)
+  }
+
 }

@@ -1,11 +1,15 @@
-<aside>
-    <ul>
-        <li class="flex flex-col">
-            <a
-            [routerLink]="[theme.id]"
-            *ngFor="let theme of data">
-            {{theme.name}}
-            </a> 
-        </li>
-    </ul>
-</aside>
+<mat-sidenav-container class="bg-violet-300">
+        <mat-sidenav-content>
+            <ul>
+                <li class="flex flex-col">
+                    <a
+                    class="p-2"
+                    [routerLink]="[theme.id]"
+                    *ngFor="let theme of data">
+                    {{theme.name}}
+                    </a> 
+                </li>
+            </ul>
+        </mat-sidenav-content>
+</mat-sidenav-container>    
+

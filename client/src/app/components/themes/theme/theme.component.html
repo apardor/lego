@@ -1,3 +1,13 @@
-<p>theme works!</p>
-<p>this is {{id}}</p>
+
+<section class="grid grid-cols-3 gap-4">
+    <mat-card *ngFor="let set of data">
+        <mat-card-header>{{set.name}}</mat-card-header>
+        <img mat-card-image src="{{set.set_img_url}}" alt="`Photo of {{set.name}}`">
+        <mat-card-footer>see more</mat-card-footer>
+    </mat-card>
+</section>
+
+
+
+
 

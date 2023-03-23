@@ -15,8 +15,10 @@ export const readThemes = async (req: Request, res: Response) => {
 
 }
 
+
+
 export const readMovieThemes = async (req: Request, res: Response) => {
-  const moviesId: number[] = [18, 118, 133, 136, 158, 209, 246, 263, 264, 269, 270, 271, 272, 274, 275, 287, 317,388, 549, 550, 555, 561, 562, 566, 578, 592, 593, 595, 596,597, 602,603, 606, 607, 608, 609, 615,616,617,618, 620, 633, 635, 640, 641, 653, 656, 667, 670, 675, 680, 684, 687, 690, 691, 695, 696, 697, 700, 701, 702,705, 706, 707, 708, 711, 714, 715, 720, 722, 724 ];
+  const moviesId: number[] = [18, 133, 136, 158, 209, 246, 263, 264, 269, 270, 271, 272, 274, 275, 287, 317,388, 549, 550, 555, 561, 562, 566, 578, 592, 593, 596,597, 602,603, 606, 607, 608, 609, 615,616,617,618, 620, 633, 635, 640, 641, 653, 656, 667, 670, 675, 680, 684, 687, 690, 691, 695, 696, 697, 700, 701, 702,705, 706, 707, 708, 711, 714, 715, 720, 722, 724 ];
   try {
       const data = await axios(config.url);
       const themes = data.data.results;
@@ -52,4 +54,30 @@ export const readSpaceThemes = async (req: Request, res: Response) => {
       console.log(e.message);
       return
     }
+  }
+
+
+  export const readSets = async (req: Request, res: Response) => {
+    try {
+        const data = await axios(config.set_url);        
+        const sets = data.data.results;
+        res.status(200).send(sets);
+      } catch (e:any) {
+        console.log(e.message);
+        return
+      }
+
+}
+
+  export const readSetId = async(req: Request, res: Response) => {
+    try {      
+      let id = req.params.id;
+      const data = await axios(`${config.set_url}&theme_id=${id}`);
+      const sets = data.data.results;
+      res.status(200).send(sets);
+    } catch (e:any) {
+      console.log(e.message);
+      return
+    }  
+  
   }
