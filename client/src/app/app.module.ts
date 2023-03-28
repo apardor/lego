@@ -13,6 +13,8 @@ import { MatCardModule } from '@angular/material/card';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ThemeComponent } from './components/themes/theme/theme.component';
+import { ErrorPageComponent } from './components/error-page/error-page.component';
+import { AboutComponent } from './components/about/about.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { ThemeComponent } from './components/themes/theme/theme.component';
     SideBarComponent,
     ThemesComponent,
     NavbarComponent,
-    ThemeComponent
+    ThemeComponent,
+    ErrorPageComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

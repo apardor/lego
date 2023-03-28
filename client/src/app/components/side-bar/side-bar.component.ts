@@ -29,7 +29,6 @@ export class SideBarComponent implements OnInit {
         case 'movies':
           this.themeService.getMovieThemes().subscribe((res:any) =>{
             this.data = res;
-            console.log(this.data, 'here is data from sidebar');
           });
           break;
         case 'city':
