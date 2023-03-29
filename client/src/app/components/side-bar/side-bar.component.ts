@@ -37,8 +37,20 @@ export class SideBarComponent implements OnInit {
         case 'space':
           this.themeService.getSpaceThemes().subscribe((res:any) => this.data = res);
           break;  
-          default:
+        case 'pirates':
+          this.themeService.getPiratesThemes().subscribe((res:any) => this.data = res);
+          break; 
+        case 'knights':
+          this.themeService.getKnightsThemes().subscribe((res:any) => this.data = res);
           break;
+        case 'creator':
+          this.themeService.getCreatorThemes().subscribe((res:any) => this.data = res);
+          break;
+        case 'sports':
+          this.themeService.getSportsThemes().subscribe((res:any) => this.data = res);
+          break;
+        default:
+        break;
         }
     });
   }

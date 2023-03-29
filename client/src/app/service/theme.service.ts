@@ -24,6 +24,22 @@ export class ThemeService {
     return this.http.get('http://localhost:8000/api/themes/space')
   }
 
+  getPiratesThemes(){
+    return this.http.get('http://localhost:8000/api/themes/pirates')
+  }
+
+  getKnightsThemes(){
+    return this.http.get('http://localhost:8000/api/themes/knights')
+  }
+
+  getCreatorThemes(){
+    return this.http.get('http://localhost:8000/api/themes/creator')
+  }
+
+  getSportsThemes(){
+    return this.http.get('http://localhost:8000/api/themes/sports')
+  }
+
   getSetById(id:any){
     return this.http.get(`http://localhost:8000/api/sets/${id}`)
   }
