@@ -15,6 +15,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ThemeComponent } from './components/themes/theme/theme.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { AboutComponent } from './components/about/about.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { AboutComponent } from './components/about/about.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    NgxPaginationModule,
     MatToolbarModule,
     MatButtonModule,
     MatCardModule,

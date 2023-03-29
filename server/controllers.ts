@@ -72,8 +72,14 @@ export const readSpaceThemes = async (req: Request, res: Response) => {
   export const readSetId = async(req: Request, res: Response) => {
     try {      
       let id = req.params.id;
+      let page:any = req.query.page || 1;
+      const itemsPerPage:any = 12;
+      const startIndex = (page - 1) * itemsPerPage;
       const data = await axios(`${config.set_url}&theme_id=${id}`);
       const sets = data.data.results;
+      const totalItems = sets.length-1;
+      const totalPages = Math.ceil(totalItems / itemsPerPage)
+      const items = sets.slice(startIndex, startIndex + parseInt(itemsPerPage));
       res.status(200).send(sets);
     } catch (e:any) {
       console.log(e.message);

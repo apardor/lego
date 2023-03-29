@@ -1,6 +1,8 @@
 <main class="flex">
     <app-side-bar class="w-1/6"></app-side-bar>
     <section class="w-full bg-violet-100">
-         <router-outlet></router-outlet>
+        <h1 *ngIf="!routerOutlet.isActivated">Make a selection</h1>
+
+         <router-outlet #routerOutlet="outlet" ></router-outlet>
     </section>
 </main>
