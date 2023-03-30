@@ -1,3 +1,8 @@
 mat-sidenav-content{
     font-family: 'Poppins', sans-serif;
 }
+
+.activebutton{
+    background-color: #7C4DFF;
+    color: white !important; 
+}

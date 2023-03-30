@@ -1,0 +1,11 @@
+.stickyImage{
+    position: fixed;
+    z-index: 100;
+}
+
+.selectSet{ 
+    height: 100vh;
+    background-image: url('../../../assets/select.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}

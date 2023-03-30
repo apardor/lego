@@ -1,7 +1,9 @@
-<main class="flex">
-    <app-side-bar class="w-1/6"></app-side-bar>
+<main class="flex mt-3.5">
+    <app-side-bar class="w-1/6 bg-violet-300"></app-side-bar>
     <section class="w-full bg-violet-100">
-        <h1 *ngIf="!routerOutlet.isActivated">Make a selection</h1>
+        <div class="sticky top-0">
+             <div *ngIf="!routerOutlet.isActivated" class="selectSet"></div>
+        </div>
          <router-outlet #routerOutlet="outlet" ></router-outlet>
     </section>
 </main>

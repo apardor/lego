@@ -3,10 +3,10 @@
     <mat-card *ngFor="let set of data | paginate: { itemsPerPage: 12, currentPage: page }">
         <mat-card-header>{{set.name}}</mat-card-header>
         <img mat-card-image src="{{set.set_img_url}}" alt="`Photo of {{set.name}}`">
-        <mat-card-footer>see more</mat-card-footer>
+        <mat-card-footer></mat-card-footer>
     </mat-card>
 </section>
-<pagination-controls (pageChange)="page = $event" class="flex justify-center"></pagination-controls>
+<pagination-controls (pageChange)="page = $event" class="flex justify-center py-8"></pagination-controls>
 
 
 
